@@ -379,7 +379,7 @@ def main():
   time_last_update = 0
   time_to_send = {9:00}
   time_sleep_across_measure = 0.9
-  url='https://github.com/Yoendric/checkinwattHandleInterruption'   #Github repository project
+  url='https://github.com/Yoendric/check_SMS'   #Github repository project
   o = OTAUpdater(url)
   led = Pin(14, Pin.OUT)
   led.value(1)
@@ -392,7 +392,7 @@ def main():
   account_sid = 'AC740a12f51481d5d366597094a5d41673'
   auth_token = '25ddb562c919923c2ba1537aefe6bc29'
   sms = TwilioSMS(account_sid, auth_token)
-  email = "yoendricoropesa@gmail.com"
+  email = "andyanthony0914@gmail.com"
   lectura=0
   Crear_Registro_Cliente(email,lectura)
   parametros=['Voltage (V)','Corriente (A)','Potencia (W)','Energia (Wh)','Frecuencia (Hz)','FactorPot','Consumo Energia']
@@ -443,7 +443,7 @@ def main():
             data_client=f.read()
             f.close()
             data_client=json.loads(data_client)
-            sms_men = {'From': '+14805265762', 'To': '+525588065172', 
+            sms_men = {'From': '+14805265762', 'To': '+525560060230', 
             'Body': 'Consumo del periodo es: %s KW. Lectura contador %s' %((data[3]-energy)/1000,data_client["lectura_contador"])}
             try:
               sms.create(sms_men['Body'], sms_men['From'], sms_men['To'])
