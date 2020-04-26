@@ -390,8 +390,8 @@ def main():
   #Reset_Energy_PZEM(uart,1)
   # Twilio settings
   account_sid = 'AC740a12f51481d5d366597094a5d41673'
-  auth_token = '25ddb562c919923c2ba1537aefe6bc29'
-  sms = TwilioSMS(account_sid, auth_token)
+  auth_token = '2e8ea574f317091'
+  sms = TwilioSMS(account_sid, auth_token+'fc7899eacf8a3c688')
   email = "andyanthony0914@gmail.com"
   lectura=0
   Crear_Registro_Cliente(email,lectura)
